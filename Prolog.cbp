@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Prolog" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Prolog" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Prolog" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="include\Atom.h" />
+		<Unit filename="include\Clause.h" />
+		<Unit filename="include\CompoundTerm.h" />
+		<Unit filename="include\Goal.h" />
+		<Unit filename="include\PLParser.h" />
+		<Unit filename="include\PLTokenizer.h" />
+		<Unit filename="include\Program.h" />
+		<Unit filename="include\Prolog.h" />
+		<Unit filename="include\Term.h" />
+		<Unit filename="include\TrueTerm.h" />
+		<Unit filename="include\Variable.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src\Clause.cpp" />
+		<Unit filename="src\CompoundTerm.cpp" />
+		<Unit filename="src\Goal.cpp" />
+		<Unit filename="src\PLParser.cpp" />
+		<Unit filename="src\PLTokenizer.cpp" />
+		<Unit filename="src\Program.cpp" />
+		<Unit filename="src\Variable.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
