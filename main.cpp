@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
     "parent(steve, jim)."\
     "parent(nathan, steve)."\
     "ancestor(A, B) :- parent(A, B)."\
-    //"ancestor(A, B) :- parent(A, X), ancestor(X, B)."\
-    "?- parent(adsf, asdf)."
+    "ancestor(A, B) :- parent(A, X), ancestor(X, B)."\
+    "?- ancestor(nathan, jim)."
     );
 
    return 0;

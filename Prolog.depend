@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1355023883 source:c:\users\teddy\programming\simpleprolog\src\clause.cpp
+	"Clause.h"
+	<iostream>
+	"Program.h"
+	"Variable.h"
+	"CompoundTerm.h"
+	"Goal.h"
+
+1355023858 c:\users\teddy\programming\simpleprolog\include\clause.h
+	<vector>
+	<string>
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\program.h
+	<vector>
+	<string>
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\variable.h
+	<iostream>
+	<string>
+	"Term.h"
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\term.h
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\compoundterm.h
+	"Term.h"
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\goal.h
+
+1355020585 source:c:\users\teddy\programming\simpleprolog\src\compoundterm.cpp
+	"CompoundTerm.h"
+	"Atom.h"
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\atom.h
+	<iostream>
+	<string>
+	"Term.h"
+
+1355024156 source:c:\users\teddy\programming\simpleprolog\src\goal.cpp
+	"Goal.h"
+	<iostream>
+	"CompoundTerm.h"
+	"Clause.h"
+	"Program.h"
+
+1355023044 source:c:\users\teddy\programming\simpleprolog\src\plparser.cpp
+	"PLParser.h"
+	"Prolog.h"
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\plparser.h
+	<string>
+	<vector>
+	"PLTokenizer.h"
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\pltokenizer.h
+	<vector>
+	<string>
+
+1355020585 c:\users\teddy\programming\simpleprolog\include\prolog.h
+	"Term.h"
+	"Atom.h"
+	"Variable.h"
+	"CompoundTerm.h"
+	"Clause.h"
+	"Goal.h"
+	"Program.h"
+	"PLTokenizer.h"
+	"PLParser.h"
+
+1355020585 source:c:\users\teddy\programming\simpleprolog\src\pltokenizer.cpp
+	"PLTokenizer.h"
+	<iostream>
+
+1355020585 source:c:\users\teddy\programming\simpleprolog\src\program.cpp
+	"Program.h"
+	"Atom.h"
+
+1355020585 source:c:\users\teddy\programming\simpleprolog\src\variable.cpp
+	"Variable.h"
+
+1355024415 source:c:\users\teddy\programming\simpleprolog\main.cpp
+	<iostream>
+	"Prolog.h"
+

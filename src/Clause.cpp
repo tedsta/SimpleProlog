@@ -44,6 +44,12 @@ void Clause::print()
     std::cout << std::endl;
 }
 
+void Clause::reset()
+{
+    for (unsigned int v = 0; v < mVariables.size(); v++)
+        mVariables[v]->reset();
+}
+
 Variable *Clause::findVariable(std::string name)
 {
     for (unsigned int v = 0; v < mVariables.size(); v++)

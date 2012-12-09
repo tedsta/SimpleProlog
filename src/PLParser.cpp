@@ -61,11 +61,15 @@ void PLParser::parseString(Program *program, std::string str)
 
         if (isQuery)
         {
+            clause->setType(ClauseType::QUERY);
+
             Goal goal(ct);
             goal.solve(program);
         }
         else if (isRule) //build rule
         {
+            clause->setType(ClauseType::RULE);
+
             std::vector <Goal*> goals;
 
             for (;start < end; start++)
@@ -74,6 +78,8 @@ void PLParser::parseString(Program *program, std::string str)
                     clause->addGoal(new Goal(buildCompoundTerm(clause, program, tokens, start, isRule)));
             }
         }
+        else //fact
+            clause->setType(ClauseType::FACT);
 
         program->addClause(clause);
 
@@ -119,14 +125,21 @@ CompoundTerm *PLParser::buildCompoundTerm(Clause *clause, Program *program, std:
         {
             ct_args[a] = clause->findVariable(args[a]);
             if (!ct_args[a])
+            {
                 ct_args[a] = new Variable(args[a]);
+                clause->addVariable((Variable*)ct_args[a]);
+            }
         }
         else if (isQuery) //query
         {
             Term *tmp = (Term*)program->findAtom(args[a]);
-            tmp = clause->findVariable(args[a]);
+            if (!tmp)
+                tmp = clause->findVariable(args[a]);
             if (!tmp) //doesn't exist, create a variable
+            {
                 tmp = new Variable(args[a]);
+                clause->addVariable((Variable*)tmp);
+            }
             ct_args[a] = tmp;
         }
         else //fact
